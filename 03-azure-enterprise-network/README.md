@@ -1,4 +1,4 @@
-﻿# Azure Enterprise Networking & Network Security Lab
+# Azure Enterprise Networking & Network Security Lab
 
 ## Project Overview
 
@@ -28,10 +28,10 @@ traffic filtering, connectivity troubleshooting, and cost management.
 | Azure Region | East US |
 | Virtual Network | vnet-enterprise-lab |
 | VNet Address Space | 10.20.0.0/16 |
-| Frontend Subnet | Snet-Frontend â€” 10.20.1.0/24 |
-| Backend Subnet | Snet-Backend â€” 10.20.2.0/24 |
-| Frontend VM | vm-frontend-test â€” 10.20.1.4 |
-| Backend VM | vm-backend-test â€” 10.20.2.4 |
+| Frontend Subnet | Snet-Frontend — 10.20.1.0/24 |
+| Backend Subnet | Snet-Backend — 10.20.2.0/24 |
+| Frontend VM | vm-frontend-test — 10.20.1.4 |
+| Backend VM | vm-backend-test — 10.20.2.4 |
 | Operating System | Ubuntu Server 24.04 |
 | VM Size | Standard D2ds v4 |
 | Public IP Addresses | None |
@@ -60,7 +60,7 @@ address space from reaching the backend subnet.
 
 Azure Network Watcher IP Flow Verify was used to evaluate NSG decisions.
 
-### Test 1 â€” Frontend to Backend TCP 8080
+### Test 1 — Frontend to Backend TCP 8080
 
 Source: 10.20.1.4
 Destination: 10.20.2.4
@@ -70,7 +70,7 @@ Result: ALLOWED
 
 Matching rule: Allow-Frontend-To-Backend-8080
 
-### Test 2 â€” Frontend to Backend SSH
+### Test 2 — Frontend to Backend SSH
 
 Source: 10.20.1.4
 Destination: 10.20.2.4
@@ -80,7 +80,7 @@ Result: DENIED
 
 Matching rule: Deny-VNet-To-Backend
 
-### Test 3 â€” External SSH to Frontend
+### Test 3 — External SSH to Frontend
 
 Simulated source: 8.8.8.8
 Destination: 10.20.1.4
